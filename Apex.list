@@ -1,0 +1,10 @@
+DOMAIN,api.epicgames.dev
+DOMAIN,friends.gs.ea.com
+DOMAIN,gateway.ea.com
+DOMAIN-SUFFIX,stryder.respawn.com
+DOMAIN,accounts.ea.com
+DOMAIN,r5-pc.s3.amazonaws.com
+
+AND,((DSCP,0),(NETWORK,UDP),(OR,(DST-PORT,27000-27100),(DST-PORT,37000-40000)))
+# 目前Apex的gcp服务器可能在上面匹配的端口范围之外, 但这种情况很少见, 如果不放心可以加上一条AND,((DSCP,0),(IP-ASN, 396982),(NETWORK,UDP),(OR,(DST-PORT,27000-27100),(DST-PORT,37000-40000)))
+AND,((DSCP,0),(NETWORK,UDP),(DST-PORT,10000-12000))
