@@ -1,2 +1,4 @@
 DOMAIN,translate.googleapis.com
 DOMAIN,aviationweather.gov
+DOMAIN,translate.google.com
+DOMAIN-SUFFIX,deepl.com
